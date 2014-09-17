@@ -1,0 +1,43 @@
+
+<div class="vid">
+  <div id="title">
+  <h1 style="font-family: 'Audiowide', cursive;"><img src= "<%= asset_path('logo.svg') %>" width="50%" height="50%"/>Up Tours</h1>
+  </div>
+  <div class="sub_title">
+    Combine the adventure of a Divvy bike ride
+    with the sights of Chicago. We have a selection of self-guided bike
+    tours you are bound to enjoy.
+  </div>
+
+  <div class="intro">
+
+    <ul class="tour_list">
+    <% Tour.all.each do |tour| %>
+      <li><h4><a href=# onclick="go_to(<%=tour.id%>)"><%= tour.name %></a></h4></li>
+      <p><%= tour.short_description %></p>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+
+<%= javascript_include_tag 'jquery.vide.min'%>
+<script type="text/javascript">
+
+  function go_to(page) {
+    window.open('/tours/' + page, "_self");
+  }
+
+  $(function(){
+    $('.vid').ready(function(){
+      $('.vid').vide("<%= asset_path('bike.mp4') %>",{playbackRate: 1, 
+        muted: true,
+        loop: true,
+        autoplay: true});
+    });
+  });
+</script>
+
+ <!-- "/assets/logo.svg" -->
+ <!-- may need to host the video on amazon -->
+ 

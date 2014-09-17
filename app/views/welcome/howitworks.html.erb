@@ -1,0 +1,71 @@
+
+<%= javascript_include_tag 'jquery.glide' %>
+<script type="text/javascript">
+  $(function(){
+    $('.slider').glide({
+        arrows: 'body',
+        autoplay: false,
+        navigation: 'body',
+        circular: false
+        });
+  });
+</script>
+
+<div class="slider">
+  <ul class="slider__wrapper">
+      <li class="slider__item">
+        <div class="presentation">
+          <h1>Team Divvy Up</h1>
+          <br><br><br>
+          <h3>Overview</h3>
+          <br><br>
+          <h3>Work Flow</h3>
+        </div>
+      </li>
+
+      <li class="slider__item">
+        <div class="presentation">
+          <h1>Process</h1>
+          <h3>MVP</h3>
+          <ul>
+            <li>Tour Guide</li>
+          </ul>
+          <h3>User Feedback</h3>
+          <ul>
+            <li>Intuitive UI</li>
+            <li>Visibility</li>
+          </ul>
+          <h3>Technology Insights</h3>
+          <ul>
+            <li>Geolocation</li>
+            <li>Divvy API</li>
+            <li>Rails</li>
+          </ul>
+        </div>
+      </li>
+      <li class="slider__item">
+        <div class="presentation">
+          <h1>General Intentions</h1>
+          <h3>Design</h3>
+          <ul>
+            <li>Benchmark</li>
+            <li>Color Scheme</li>
+            <li>Vide.js</li>
+            <li>Glide.js</li>
+          </ul>
+          <br>
+          <h3>Difficulties</h3>
+          <ul>
+            <li>jQuery</li>
+            <li>GMaps.js</li>
+            <li>Asynchronous Loading</li>
+          </ul>
+        </div>
+      </li>
+      <li class="slider__item">
+        <div class="presentation">
+          <h1>Questions?</li>
+        </div>
+      </li>
+  </ul>
+</div>
